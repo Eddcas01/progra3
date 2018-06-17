@@ -3,44 +3,44 @@
 #include <cstdlib>
 using namespace std;
 
-struct nodo {
+struct nodo1 {
 	int nro;
-	struct nodo *izq, *der, *padre;
+	struct nodo1 *izq, *der, *padre;
 };
 
-typedef struct nodo *ABB;
-/* es un puntero de tipo nodo que hemos llamado ABB, que ulitizaremos
+typedef struct nodo1 *ABB;
+/* es un puntero de tipo nodo1 que hemos llamado ABB, que ulitizaremos
 para mayor facilidad de creacion de variables */
 
 
 //protos
 bool Busqueda(ABB &arbol, int n);
-void Eliminarnodo(nodo *);
-nodo *minimo(nodo *);
-void reemplazar(nodo*, nodo *);
-void destruirNodo(nodo *);
-void EliminarnodoDer(nodo *);
-void EliminarIZQ(nodo *);
-nodo *minimoDer(nodo *);
-void reemplazarDer(nodo*, nodo *);
-void destruirNodoDer(nodo *);
+void Eliminarnodo1(nodo1 *);
+nodo1 *minimo(nodo1 *);
+void reemplazar(nodo1*, nodo1 *);
+void destruirnodo1(nodo1 *);
+void Eliminarnodo1Der(nodo1 *);
+void EliminarIZQ(nodo1 *);
+nodo1 *minimoDer(nodo1 *);
+void reemplazarDer(nodo1*, nodo1 *);
+void destruirnodo1Der(nodo1 *);
 
-ABB crearNodo(int x, nodo *padre)
+ABB crearnodo1(int x, nodo1 *padre)
 {
-	ABB nuevoNodo = new nodo;
-	nuevoNodo->nro = x;
-	nuevoNodo->izq = NULL;
-	nuevoNodo->der = NULL;
-	nuevoNodo->padre = padre;
+	ABB nuevonodo1 = new nodo1;
+	nuevonodo1->nro = x;
+	nuevonodo1->izq = NULL;
+	nuevonodo1->der = NULL;
+	nuevonodo1->padre = padre;
 
 
-	return nuevoNodo;
+	return nuevonodo1;
 }
-void insertar(ABB &arbol, int x, nodo *padre)
+void insertar(ABB &arbol, int x, nodo1 *padre)
 {
 	if (arbol == NULL)
 	{
-		arbol = crearNodo(x, padre);
+		arbol = crearnodo1(x, padre);
 
 	}
 	else if (x < arbol->nro)
@@ -109,7 +109,7 @@ bool Busqueda(ABB &arbol, int n) {
 	}
 
 }
-void Eliminar(nodo *arbol, int n) {
+void Eliminar(nodo1 *arbol, int n) {
 	if (arbol == NULL) {
 		return;
 	}
@@ -123,16 +123,16 @@ void Eliminar(nodo *arbol, int n) {
 	else// si noo es mayor ni menor y el arbol no esta vacio "lo encontramos"
 	{
 
-		Eliminarnodo(arbol);
+		Eliminarnodo1(arbol);
 	}
 
 
 
 }
 
-//funcion para determinar el nodo mas izquierdo posible
+//funcion para determinar el nodo1 mas izquierdo posible
 
-nodo *minimo(nodo *arbol) {
+nodo1 *minimo(nodo1 *arbol) {
 	if (arbol == NULL) {
 		return NULL;
 	}
@@ -141,52 +141,52 @@ nodo *minimo(nodo *arbol) {
 	}
 	else
 	{
-		return arbol; //si no tinen hijo izq le regresamos el misno nodo
+		return arbol; //si no tinen hijo izq le regresamos el misno nodo1
 
 	}
 
 
 }
-void Eliminarnodo(nodo *nodoEliminar) {
+void Eliminarnodo1(nodo1 *nodo1Eliminar) {
 
 	//puede ser hoja 0 hijos
 	//hijo izquierdo o derecho
 
 	//eliminacion con 2 subarboles hijos
-	if (nodoEliminar->izq && nodoEliminar->der) {
-		nodo *menor = minimo(nodoEliminar->der);
-		nodoEliminar->nro = menor->nro;
-		Eliminarnodo(menor);
+	if (nodo1Eliminar->izq && nodo1Eliminar->der) {
+		nodo1 *menor = minimo(nodo1Eliminar->der);
+		nodo1Eliminar->nro = menor->nro;
+		Eliminarnodo1(menor);
 	}
-	else if (nodoEliminar->izq) {//si tiene hijo izq
-		reemplazar(nodoEliminar, nodoEliminar->izq);
-		destruirNodo(nodoEliminar);
+	else if (nodo1Eliminar->izq) {//si tiene hijo izq
+		reemplazar(nodo1Eliminar, nodo1Eliminar->izq);
+		destruirnodo1(nodo1Eliminar);
 	}
-	else if (nodoEliminar->der) {//si tiene hijo der
-		reemplazar(nodoEliminar, nodoEliminar->der);
-		destruirNodo(nodoEliminar);
+	else if (nodo1Eliminar->der) {//si tiene hijo der
+		reemplazar(nodo1Eliminar, nodo1Eliminar->der);
+		destruirnodo1(nodo1Eliminar);
 	}
-	else {//nodo terminal
-		reemplazar(nodoEliminar, NULL);
-		destruirNodo(nodoEliminar);
+	else {//nodo1 terminal
+		reemplazar(nodo1Eliminar, NULL);
+		destruirnodo1(nodo1Eliminar);
 
 	}
 
 
 }
-void reemplazar(nodo *arbol, nodo *nuevoNodo) {
+void reemplazar(nodo1 *arbol, nodo1 *nuevonodo1) {
 	if (arbol->padre) {
 		//arbol->padre hay que asignarle el nuevo hijo
 		if (arbol->nro == arbol->padre->izq->nro) {
-			arbol->padre->izq = nuevoNodo;
+			arbol->padre->izq = nuevonodo1;
 		}
 		else if (arbol->nro == arbol->padre->der->nro) {
-			arbol->padre->der = nuevoNodo;
+			arbol->padre->der = nuevonodo1;
 		}
 	}
-	if (nuevoNodo) {
+	if (nuevonodo1) {
 		//asignarle su nuevo padre
-		nuevoNodo->padre = arbol->padre;
+		nuevonodo1->padre = arbol->padre;
 
 
 	}
@@ -194,15 +194,15 @@ void reemplazar(nodo *arbol, nodo *nuevoNodo) {
 
 
 }
-void destruirNodo(nodo *nodo) {
-	nodo->izq = NULL;
-	nodo->der = NULL;
+void destruirnodo1(nodo1 *nodo1) {
+	nodo1->izq = NULL;
+	nodo1->der = NULL;
 
-	delete nodo;
+	delete nodo1;
 
 }
 //eliminacion por la izquierda-todo derecha
-void EliminarIZQ(nodo *arbol, int n) {
+void EliminarIZQ(nodo1 *arbol, int n) {
 	if (arbol == NULL) {
 		return;
 	}
@@ -216,16 +216,16 @@ void EliminarIZQ(nodo *arbol, int n) {
 	else// si noo es mayor ni menor y el arbol no esta vacio "lo encontramos"
 	{
 
-		EliminarnodoDer(arbol);
+		Eliminarnodo1Der(arbol);
 	}
 
 
 
 }
 
-//funcion para determinar el nodo mas derecho posible
+//funcion para determinar el nodo1 mas derecho posible
 
-nodo *minimoDer(nodo *arbol) {
+nodo1 *minimoDer(nodo1 *arbol) {
 	if (arbol == NULL) {
 		return NULL;
 	}
@@ -234,62 +234,62 @@ nodo *minimoDer(nodo *arbol) {
 	}
 	else
 	{
-		return arbol; //si no tinen hijo izq le regresamos el misno nodo
+		return arbol; //si no tinen hijo izq le regresamos el misno nodo1
 
 	}
 
 
 }
-void EliminarnodoDer(nodo *nodoEliminar) {
+void Eliminarnodo1Der(nodo1 *nodo1Eliminar) {
 
 	//puede ser hoja 0 hijos
 	//hijo izquierdo o derecho
 
 	//eliminacion con 2 subarboles hijos
-	if (nodoEliminar->izq && nodoEliminar->der) {
-		nodo *menor = minimoDer(nodoEliminar->izq);
-		nodoEliminar->nro = menor->nro;
-		EliminarnodoDer(menor);
+	if (nodo1Eliminar->izq && nodo1Eliminar->der) {
+		nodo1 *menor = minimoDer(nodo1Eliminar->izq);
+		nodo1Eliminar->nro = menor->nro;
+		Eliminarnodo1Der(menor);
 	}
-	else if (nodoEliminar->izq) {//si tiene hijo izq
-		reemplazarDer(nodoEliminar, nodoEliminar->izq);
-		destruirNodoDer(nodoEliminar);
+	else if (nodo1Eliminar->izq) {//si tiene hijo izq
+		reemplazarDer(nodo1Eliminar, nodo1Eliminar->izq);
+		destruirnodo1Der(nodo1Eliminar);
 	}
-	else if (nodoEliminar->der) {//si tiene hijo der
-		reemplazarDer(nodoEliminar, nodoEliminar->der);
-		destruirNodoDer(nodoEliminar);
+	else if (nodo1Eliminar->der) {//si tiene hijo der
+		reemplazarDer(nodo1Eliminar, nodo1Eliminar->der);
+		destruirnodo1Der(nodo1Eliminar);
 	}
-	else {//nodo terminal
-		reemplazarDer(nodoEliminar, NULL);
-		destruirNodoDer(nodoEliminar);
+	else {//nodo1 terminal
+		reemplazarDer(nodo1Eliminar, NULL);
+		destruirnodo1Der(nodo1Eliminar);
 
 	}
 
 
 }
-void reemplazarDer(nodo *arbol, nodo *nuevoNodo) {
+void reemplazarDer(nodo1 *arbol, nodo1 *nuevonodo1) {
 	if (arbol->padre) {
 		//arbol->padre hay que asignarle el nuevo hijo
 		if (arbol->nro == arbol->padre->izq->nro) {
-			arbol->padre->izq = nuevoNodo;
+			arbol->padre->izq = nuevonodo1;
 		}
 		else if (arbol->nro == arbol->padre->der->nro) {
-			arbol->padre->der = nuevoNodo;
+			arbol->padre->der = nuevonodo1;
 		}
 	}
-	if (nuevoNodo) {
+	if (nuevonodo1) {
 		//asignarle su nuevo padre
-		nuevoNodo->padre = arbol->padre;
+		nuevonodo1->padre = arbol->padre;
 	}
 
 
 
 }
-void destruirNodoDer(nodo *nodo) {
-	nodo->izq = NULL;
-	nodo->der = NULL;
+void destruirnodo1Der(nodo1 *nodo1) {
+	nodo1->izq = NULL;
+	nodo1->der = NULL;
 
-	delete nodo;
+	delete nodo1;
 
 }
 
@@ -301,8 +301,8 @@ void menu2()
 	int dato;
 	ABB arbol = NULL;   // creado Arbol
 
-	int n;  // numero de nodos del arbol
-	int x; // elemento a insertar en cada nodo
+	int n;  // numero de nodo1s del arbol
+	int x; // elemento a insertar en cada nodo1
 menu:
 	system("cls");
 	cout << "***** MENU ******\n";
@@ -310,7 +310,7 @@ menu:
 	cout << "2.ver arbol\n ";
 	cout << "3.morstrar ordenamientos\n";
 	cout << "4.Buscar en arbol\n";
-	cout << "5.Eliminar un nodo del arbol\n";
+	cout << "5.Eliminar un nodo1 del arbol\n";
 	cout << "6.Eliminar por la izquierda\n";
 	cout << "7.salir\n ";
 	cin >> op;
@@ -319,13 +319,13 @@ menu:
 		{
 		case 1:cout << "\n\t\t  ..[ ARBOL BINARIO DE BUSQUEDA ]..  \n\n";
 
-			cout << " Numero de nodos del arbol:  ";
+			cout << " Numero de nodo1s del arbol:  ";
 			cin >> n;
 			cout << endl;
 
 			for (int i = 0; i < n; i++)
 			{
-				cout << " Numero del nodo " << i + 1 << ": ";
+				cout << " Numero del nodo1 " << i + 1 << ": ";
 				cin >> x;
 				insertar(arbol, x, NULL);
 			}

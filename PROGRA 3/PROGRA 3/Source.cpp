@@ -3,6 +3,7 @@
 #include"1.h"
 #include"2.h"
 #include"3.h"
+#include"5.h"
 #include"6.h"
 #include"8.h"
 
@@ -17,7 +18,7 @@ int main()
 		cout << "\n\t\t################# - MENU - ################\n";
 		cout << "\t\t# 1. ALFABETO                               #\n";
 		cout << "\t\t# 2. ARBOL BINARIO                          #\n";
-		cout << "\t\t# 3. Arboles AVL                            #\n";
+		cout << "\t\t# 3. ARBOLES AVL                            #\n";
 		cout << "\t\t# 4.                                        #\n";
 		cout << "\t\t# 5.                                        #\n";
 		cout << "\t\t# 6. SEPARAR OPERACIONES                    #\n";
