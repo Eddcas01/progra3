@@ -20,10 +20,10 @@ int main()
 		cout << "\t\t# 2. ARBOL BINARIO                          #\n";
 		cout << "\t\t# 3. ARBOLES AVL                            #\n";
 		cout << "\t\t# 4.                                        #\n";
-		cout << "\t\t# 5.                                        #\n";
+		cout << "\t\t# 5. COLAS                                  #\n";
 		cout << "\t\t# 6. SEPARAR OPERACIONES                    #\n";
 		cout << "\t\t# 7.                                        #\n";
-		cout << "\t\t# 8. Floyd - Warshall                       #\n";
+		cout << "\t\t# 8. FLOYD - WARSHALL                       #\n";
 		cout << "\t\t# 9.                                        #\n";
 		cout << "\t\t# 10.                                       #\n";
 		cout << "\t\t#############################################\n";
@@ -36,7 +36,7 @@ int main()
 		case 2: menu2();break;
 		case 3: menu3(); break;
 		case 4: break;
-		case 5: break;
+		case 5: menu5(); break;
 		case 6: menu6();break;
 		case 7: break;
 		case 8: menu8(); break;
