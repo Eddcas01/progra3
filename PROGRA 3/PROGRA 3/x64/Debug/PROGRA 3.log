@@ -1,5 +1,10 @@
 ﻿  Source.cpp
+<<<<<<< HEAD
 c:\users\edgar\documents\github\progra3\progra 3\progra 3\1.h(177): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   LINK : no se encontró C:\Users\edgar\Documents\GitHub\progra3\PROGRA 3\x64\Debug\PROGRA 3.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
   PROGRA 3.vcxproj -> C:\Users\edgar\Documents\GitHub\progra3\PROGRA 3\x64\Debug\PROGRA 3.exe
   PROGRA 3.vcxproj -> C:\Users\edgar\Documents\GitHub\progra3\PROGRA 3\x64\Debug\PROGRA 3.pdb (Full PDB)
+=======
+  PROGRA 3.vcxproj -> C:\Users\gganp\Desktop\GitHub\progra3\PROGRA 3\x64\Debug\PROGRA 3.exe
+  PROGRA 3.vcxproj -> C:\Users\gganp\Desktop\GitHub\progra3\PROGRA 3\x64\Debug\PROGRA 3.pdb (Full PDB)
+>>>>>>> def1d8a2a1024729c2a029d620bf2801272c0ee8
