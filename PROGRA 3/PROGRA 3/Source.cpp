@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include"3.h"
 
 using namespace std;
 
@@ -12,7 +12,7 @@ int main()
 		cout << "\n\t\t################# - MENU - ################\n";
 		cout << "\t\t# 1.                                        #\n";
 		cout << "\t\t# 2.                                        #\n";
-		cout << "\t\t# 3.                                        #\n";
+		cout << "\t\t# 3.  Arboles AVL                           #\n";
 		cout << "\t\t# 4.                                        #\n";
 		cout << "\t\t# 5.                                        #\n";
 		cout << "\t\t# 6.                                        #\n";
@@ -28,7 +28,7 @@ int main()
 		{
 		case 1: break;
 		case 2: break;
-		case 3: break;
+		case 3:  menu3(); break;
 		case 4: break;
 		case 5: break;
 		case 6: break;
