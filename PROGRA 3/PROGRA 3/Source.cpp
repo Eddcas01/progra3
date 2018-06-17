@@ -1,10 +1,8 @@
 #include<iostream>
-<<<<<<< HEAD
 #include"1.h"
 #include"2.h"
-=======
 #include"3.h"
->>>>>>> def1d8a2a1024729c2a029d620bf2801272c0ee8
+#include"5.h"
 
 using namespace std;
 
@@ -15,15 +13,9 @@ int main()
 	{
 		system("cls");
 		cout << "\n\t\t################# - MENU - ################\n";
-<<<<<<< HEAD
 		cout << "\t\t# 1. ALFABETO                               #\n";
 		cout << "\t\t# 2. ARBOL BINARIO                          #\n";
-		cout << "\t\t# 3.                                        #\n";
-=======
-		cout << "\t\t# 1.                                        #\n";
-		cout << "\t\t# 2.                                        #\n";
-		cout << "\t\t# 3.  Arboles AVL                           #\n";
->>>>>>> def1d8a2a1024729c2a029d620bf2801272c0ee8
+		cout << "\t\t# 3. ARBOLES AVL                            #\n";
 		cout << "\t\t# 4.                                        #\n";
 		cout << "\t\t# 5.                                        #\n";
 		cout << "\t\t# 6.                                        #\n";
@@ -37,11 +29,11 @@ int main()
 
 		switch (opmain)
 		{
-		case 1: break;
-		case 2: break;
-		case 3:  menu3(); break;
-		case 4: break;
-		case 5: break;
+		case 1: menu1(); break;
+		case 2: menu2(); break;
+		case 3: menu3(); break;
+		case 4: menu4(); break;
+		case 5: menu5(); break;
 		case 6: break;
 		case 7: break;
 		case 8: break;
