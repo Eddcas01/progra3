@@ -1,5 +1,6 @@
 #include<iostream>
-
+#include"1.h"
+#include"2.h"
 
 using namespace std;
 
@@ -10,8 +11,8 @@ int main()
 	{
 		system("cls");
 		cout << "\n\t\t################# - MENU - ################\n";
-		cout << "\t\t# 1.                                        #\n";
-		cout << "\t\t# 2.                                        #\n";
+		cout << "\t\t# 1. ALFABETO                               #\n";
+		cout << "\t\t# 2. ARBOL BINARIO                          #\n";
 		cout << "\t\t# 3.                                        #\n";
 		cout << "\t\t# 4.                                        #\n";
 		cout << "\t\t# 5.                                        #\n";
