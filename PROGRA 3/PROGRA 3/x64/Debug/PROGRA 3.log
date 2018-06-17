@@ -1,2 +1,7 @@
-﻿  PROGRA 3.vcxproj -> C:\Users\gganp\Desktop\GitHub\progra3\PROGRA 3\x64\Debug\PROGRA 3.exe
-  PROGRA 3.vcxproj -> C:\Users\gganp\Desktop\GitHub\progra3\PROGRA 3\x64\Debug\PROGRA 3.pdb (Full PDB)
+﻿  Source.cpp
+c:\users\edgar\documents\github\progra3\progra 3\progra 3\1.h(177): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\edgar\documents\github\progra3\progra 3\progra 3\5.h(126): warning C4101: 'dato': variable local sin referencia
+c:\users\edgar\documents\github\progra3\progra 3\progra 3\5.h(128): warning C4101: 'x': variable local sin referencia
+  LINK : no se encontró C:\Users\edgar\Documents\GitHub\progra3\PROGRA 3\x64\Debug\PROGRA 3.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+  PROGRA 3.vcxproj -> C:\Users\edgar\Documents\GitHub\progra3\PROGRA 3\x64\Debug\PROGRA 3.exe
+  PROGRA 3.vcxproj -> C:\Users\edgar\Documents\GitHub\progra3\PROGRA 3\x64\Debug\PROGRA 3.pdb (Full PDB)

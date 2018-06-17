@@ -39,7 +39,10 @@
       <Filter>Archivos de código fuente\Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="5.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de código fuente\Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\4.h">
+      <Filter>Archivos de código fuente\Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

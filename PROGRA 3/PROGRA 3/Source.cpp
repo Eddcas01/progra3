@@ -3,6 +3,7 @@
 #include"1.h"
 #include"2.h"
 #include"3.h"
+#include"4.h"
 #include"5.h"
 #include"6.h"
 #include"8.h"
@@ -19,7 +20,7 @@ int main()
 		cout << "\t\t# 1. ALFABETO                               #\n";
 		cout << "\t\t# 2. ARBOL BINARIO                          #\n";
 		cout << "\t\t# 3. ARBOLES AVL                            #\n";
-		cout << "\t\t# 4.                                        #\n";
+		cout << "\t\t# 4. LISTA DOBLE ENLACE                     #\n";
 		cout << "\t\t# 5. COLAS                                  #\n";
 		cout << "\t\t# 6. SEPARAR OPRECIONES                     #\n";
 		cout << "\t\t# 7.                                        #\n";
@@ -36,7 +37,7 @@ int main()
 		case 1: menu1(); break;
 		case 2: menu2(); break;
 		case 3: menu3(); break;
-		case 4:  break;
+		case 4: menu4(); break;
 		case 5: menu5(); break;
 		case 6: menu6(); break;
 		case 7: break;
