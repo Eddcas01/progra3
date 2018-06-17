@@ -3,6 +3,8 @@
 #include"1.h"
 #include"2.h"
 #include"3.h"
+#include"6.h"
+#include"8.h"
 
 using namespace std;
 
@@ -18,9 +20,9 @@ int main()
 		cout << "\t\t# 3. Arboles AVL                            #\n";
 		cout << "\t\t# 4.                                        #\n";
 		cout << "\t\t# 5.                                        #\n";
-		cout << "\t\t# 6.                                        #\n";
+		cout << "\t\t# 6. SEPARAR OPERACIONES                    #\n";
 		cout << "\t\t# 7.                                        #\n";
-		cout << "\t\t# 8.                                        #\n";
+		cout << "\t\t# 8. Floyd - Warshall                       #\n";
 		cout << "\t\t# 9.                                        #\n";
 		cout << "\t\t# 10.                                       #\n";
 		cout << "\t\t#############################################\n";
@@ -36,7 +38,7 @@ int main()
 		case 5: break;
 		case 6: menu6();break;
 		case 7: break;
-		case 8: break;
+		case 8: menu8(); break;
 		case 9: break;
 		case 10: break;
 
