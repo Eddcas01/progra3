@@ -67,7 +67,7 @@ void menu9()
 	do
 	{
 		system("cls");
-		cout << "\tPrograma para Control de pila\n";
+		cout << "\tPROGRAMA PARA CONTROL DE PILA ESTATICA\n";
 		cout << "1.Ingresar Valores a la pila (Push) \n";
 		cout << "2.Mostrar Datos de la Pila (Recorrido) \n";
 		cout << "3.Eliminar Valores de la Pila (Pop) \n";

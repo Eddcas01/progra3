@@ -9,6 +9,7 @@
 #include"7.h"
 #include"8.h"
 #include"9.h"
+#include"10.h"
 
 using namespace std;
 
@@ -45,7 +46,7 @@ int main()
 		case 7: menu7(); break;
 		case 8: menu8(); break;
 		case 9: menu9(); break;
-		case 10: break;
+		case 10: menu10(); break;
 
 		default:
 			break;
