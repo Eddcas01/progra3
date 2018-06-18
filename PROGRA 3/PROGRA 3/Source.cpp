@@ -8,6 +8,7 @@
 #include"6.h"
 #include"7.h"
 #include"8.h"
+#include"9.h"
 
 using namespace std;
 
@@ -26,8 +27,8 @@ int main()
 		cout << "\t\t# 6. SEPARAR OPERACIONES                    #\n";
 		cout << "\t\t# 7. LISTA SIMPLE CON UN DATO               #\n";
 		cout << "\t\t# 8. FLOYD WARSHAL                          #\n";
-		cout << "\t\t# 9.                                        #\n";
-		cout << "\t\t# 10.                                       #\n";
+		cout << "\t\t# 9. PILA ESTATICA CON UN DATO              #\n";
+		cout << "\t\t# 10.PILA DINAMICA CON UN DATO              #\n";
 		cout << "\t\t#############################################\n";
 		cout << "\t\tseleccione una opcion -> ";
 		cin >> opmain;
@@ -43,7 +44,7 @@ int main()
 		case 6: menu6(); break;
 		case 7: menu7(); break;
 		case 8: menu8(); break;
-		case 9: break;
+		case 9: menu9(); break;
 		case 10: break;
 
 		default:

@@ -47,5 +47,8 @@
     <ClInclude Include="7.h">
       <Filter>Archivos de código fuente\Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="9.h">
+      <Filter>Archivos de código fuente\Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
