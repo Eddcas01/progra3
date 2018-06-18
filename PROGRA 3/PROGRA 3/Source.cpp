@@ -6,6 +6,7 @@
 #include"4.h"
 #include"5.h"
 #include"6.h"
+#include"7.h"
 #include"8.h"
 
 using namespace std;
@@ -22,8 +23,8 @@ int main()
 		cout << "\t\t# 3. ARBOLES AVL                            #\n";
 		cout << "\t\t# 4. LISTA DOBLE ENLACE                     #\n";
 		cout << "\t\t# 5. COLAS                                  #\n";
-		cout << "\t\t# 6. SEPARAR OPRECIONES                     #\n";
-		cout << "\t\t# 7.                                        #\n";
+		cout << "\t\t# 6. SEPARAR OPERACIONES                    #\n";
+		cout << "\t\t# 7. LISTA SIMPLE CON UN DATO               #\n";
 		cout << "\t\t# 8. FLOYD WARSHAL                          #\n";
 		cout << "\t\t# 9.                                        #\n";
 		cout << "\t\t# 10.                                       #\n";
@@ -40,7 +41,7 @@ int main()
 		case 4: menu4(); break;
 		case 5: menu5(); break;
 		case 6: menu6(); break;
-		case 7: break;
+		case 7: menu7(); break;
 		case 8: menu8(); break;
 		case 9: break;
 		case 10: break;
